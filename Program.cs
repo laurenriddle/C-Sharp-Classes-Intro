@@ -29,7 +29,15 @@ namespace Planner
             FiveOneThreeSixth.Construct();
             SixSevenNineSecond.Construct();
 
-            Console.WriteLine("Hello World!");
+            // Have business people in your city purchase each of your buildings.
+            FiveOneTwoEigth.Purchased("Brant Pippin");
+            FiveOneThreeSixth.Purchased("Corri Golden");
+            SixSevenNineSecond.Purchased("Christian Pippin");
+
+            // display building information
+            FiveOneThreeSixth.BuildingInfo();
+            FiveOneTwoEigth.BuildingInfo();
+            SixSevenNineSecond.BuildingInfo();
         }
     }
 }

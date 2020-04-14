@@ -27,7 +27,7 @@ namespace Planner
         public int _Stories {get; set;}
         public double _Width {get; set;}
         public double _Depth {get; set;}
-        public void Volume () { Console.WriteLine( _Width * _Depth * (3 * _Stories)); }
+        public void Volume() { return _Width * _Depth * (3 * _Stories); }
 
         /*
         Constructor
@@ -48,6 +48,19 @@ namespace Planner
         public void Construct() { _dateConstructed = DateTime.Now; }
 
         public void Purchased(string purchaser_name) { _owner = purchaser_name; }
+
+        /*
+        After all of the buildings have been purchased, display the following information to the console for each building.
+
+        100 Main Street
+        ---------------
+        Designed by Steve Brownlee
+        Constructed on 2/1/18 7:19:08 AM
+        Owned by Bob Ross
+        16128 cubic meters of space
+        */
+
+        public void BuildingInfo() { Console.WriteLine($"{_address}" + Environment.NewLine + "---------------" + Environment.NewLine + $"Designed by {_designer}" + Environment.NewLine + $"Constructed on {_dateConstructed}" + Environment.NewLine + $"Owned by {_owner}" + Environment.NewLine);}
 
     }
 }
