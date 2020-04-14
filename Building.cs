@@ -15,6 +15,9 @@ namespace Planner
 
         public void Volume () { Console.WriteLine( _Width * _Depth * (3 * _Stories)); }
 
+        public Building(string address) {
+            
+        }
     
     }
 }
